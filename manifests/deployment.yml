@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: yogitapariyanipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yogitapariyanipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: yogitapariyanipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: yogitapariyanipipelinesjavascriptdocker 
+          image: mycontainerregistryyog.azurecr.io/yogitapariyanipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
